@@ -1,0 +1,29 @@
+<ion-content>
+  <swiper class="swiper-welcome" #swiper [config]="config" (slideChange)="swiperSlideChanged($event)"
+    (reachEnd)="onLastSlide()">
+    <ng-template swiperSlide>
+      <img src="../../../../assets/img/illu-1.png" class="animate__animated animate__fadeInDown">
+      <h3 class="animate__animated animate__fadeInUp">A new experience<br>for ordering food.</h3>
+      <p class="animate__animated animate__fadeInUp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum minima molestiae modi praesentium? Unde libero tempore.</p>
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="../../../../assets/img/illu-2.png">
+      <h3>Find restaurants easily.</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum minima molestiae modi praesentium? Unde libero tempore.</p>
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="../../../../assets/img/illu-3.png">
+      <h3>Recommendations based on your previous orders.</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum minima molestiae modi praesentium? Unde libero tempore.</p>
+    </ng-template>
+  </swiper>
+</ion-content>
+
+<ion-footer class="ion-padding-bottom-large animate__animated animate__fadeInUp">
+  <ion-button class="ion-margin" expand="block" (click)="nextSlide()" *ngIf="!last_slide">
+    Next
+  </ion-button>
+  <ion-button class="ion-margin" expand="block" (click)="getStarted()" *ngIf="last_slide">
+    Get started
+  </ion-button>
+</ion-footer>

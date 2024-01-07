@@ -1,0 +1,169 @@
+<ion-header class="ion-header-transparent">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="white" text="All" defaultHref="/explore"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button color="white" routerLink="/cart">
+        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+        <ion-badge color="primary" mode="ios">2</ion-badge>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="image-hero-content">
+
+  <div class="image-hero" style="background: url(../../../../assets/img/restaurant_05.jpg)">
+    <div class="image-hero-gradient image-hero-gradient-intense">
+      <div>
+        <p>Betty's Burger</p>
+        <div class="star-rating">
+          <div>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-half"></ion-icon>
+          </div>
+          <span>(6829 ratings)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ion-padding container-rounded-top">
+    <ion-segment class="segment-small" scrollable value="all">
+      <ion-segment-button value="all">
+        <p>All</p>
+      </ion-segment-button>
+      <ion-segment-button value="new">
+        <p>New Menu</p>
+      </ion-segment-button>
+      <ion-segment-button value="lunch">
+        <p>Lunch Specials</p>
+      </ion-segment-button>
+      <ion-segment-button value="recommendations">
+        <p>Recommendations</p>
+      </ion-segment-button>
+      <ion-segment-button value="deals">
+        <p>Best Deals</p>
+      </ion-segment-button>
+    </ion-segment>
+
+    <hr class="hr-transparent hr-small">
+
+    <ion-list class="item-card-list item-card-list-dishes" lines="none">
+      <ion-item button detail routerLink="dish">
+        <ion-avatar slot="start">
+          <img src="../../../../../assets/img/b-1.jpg">
+        </ion-avatar>
+        <ion-label>
+          <h3>Supreme Burger</h3>
+          <p>Our premium burger. The best of best.</p>
+          <div class="ion-flex ion-align-items-center ion-space-between">
+            <p class="ingredients">
+              <span>🥩</span>
+              <span>🧀</span>
+              <span>🧅</span>
+              <span>🍅</span>
+              <span>🧄</span>
+              <span>🥓</span>
+            </p>
+            <p class="info">
+              <span class="price">$8.99</span>
+            </p>
+          </div>
+        </ion-label>
+      </ion-item>
+      <ion-item button detail routerLink="dish">
+        <ion-avatar slot="start">
+          <img src="../../../../../assets/img/b-2.jpg">
+        </ion-avatar>
+        <ion-label>
+          <h3>Double M</h3>
+          <p>Betty's all-time classic double trouble.</p>
+          <div class="ion-flex ion-align-items-center ion-space-between">
+            <p class="ingredients">
+              <span>🥩</span>
+              <span>🧀</span>
+              <span>🧅</span>
+              <span>🍅</span>
+            </p>
+            <p class="info">
+              <span class="price">$7.99</span>
+            </p>
+          </div>
+        </ion-label>
+      </ion-item>
+      <ion-item button detail routerLink="dish">
+        <ion-avatar slot="start">
+          <img src="../../../../../assets/img/b-3.jpg">
+        </ion-avatar>
+        <ion-label>
+          <h3>Green B</h3>
+          <p>Wholemeal bread and fresh salad with a light beef patty.</p>
+          <div class="ion-flex ion-align-items-center ion-space-between">
+            <p class="ingredients">
+              <span>🥩</span>
+              <span>🧀</span>
+              <span>🍅</span>
+            </p>
+            <p class="info">
+              <span class="info-success">vegan</span>
+              <span class="price">$6.99</span>
+            </p>
+          </div>
+        </ion-label>
+      </ion-item>
+      <ion-item button detail routerLink="dish">
+        <ion-avatar slot="start">
+          <img src="../../../../../assets/img/b-4.jpg">
+        </ion-avatar>
+        <ion-label>
+          <h3>Bacon King</h3>
+          <p>Tasty extra bacon and extra cheese.</p>
+          <div class="ion-flex ion-align-items-center ion-space-between">
+            <p class="ingredients">
+              <span>🥩</span>
+              <span>🧀</span>
+              <span>🍅</span>
+              <span>🧄</span>
+              <span>🥓</span>
+            </p>
+            <p class="info">
+              <span class="price">$6.99</span>
+            </p>
+          </div>
+        </ion-label>
+      </ion-item>
+      <ion-item button detail routerLink="dish">
+        <ion-avatar slot="start">
+          <img src="../../../../../assets/img/b-5.jpg">
+        </ion-avatar>
+        <ion-label>
+          <h3>Sour Burger</h3>
+          <p>Mix of fresh salat and sour cream for a different experience.</p>
+          <div class="ion-flex ion-align-items-center ion-space-between">
+            <p class="ingredients">
+              <span>🥩</span>
+              <span>🧀</span>
+              <span>🍅</span>
+              <span>🧄</span>
+              <span>🌶️</span>
+            </p>
+            <p class="info">
+              <span class="price">$7.99</span>
+            </p>
+          </div>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-text color="medium">
+      <small>All burgers come with french fries, barbecue and salsa dip.</small>
+    </ion-text>
+
+  </div>
+
+</ion-content>

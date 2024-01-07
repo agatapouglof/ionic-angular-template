@@ -1,0 +1,152 @@
+<ion-header collapse="fade" [translucent]="true" class="custom-header">
+  <ion-toolbar>
+    <div slot="secondary" class="slot-left">
+      <div class="toolbar-location-dropdown">
+        <span>Your location<ion-icon name="chevron-down-outline"></ion-icon></span>
+        <p>New York City</p>
+      </div>
+    </div>
+    <ion-buttons slot="primary">
+      <ion-button color="secondary" routerLink="/cart">
+        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+        <ion-badge color="primary" mode="ios">2</ion-badge>
+      </ion-button>
+    </ion-buttons>
+    <div slot="primary" class="slot-right">
+      <ion-avatar>
+        <img src="../../../../assets/img/avatar_01.jpg" />
+      </ion-avatar>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="ion-padding">
+    <h1 class="ion-margin-top">What's it going to be today, Michael? 🤤</h1>
+  </div>
+
+  <swiper class="swiper-categories ion-margin-top-small" #swiper [config]="swiper_categories_config">
+    <ng-template swiperSlide *ngFor="let category of categories">
+      <ion-card button class="ion-no-margin ion-no-padding">
+        <ion-card-content>
+          <span>{{category.icon}}</span>
+          <h2>{{category.name}}</h2>
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+  </swiper>
+
+  <div class="ion-padding-horizontal ion-margin-bottom ion-margin-top">
+    <h2>Deals of the day</h2>
+  </div>
+
+  <swiper class="swiper-deals ion-margin-top-small" #swiper [config]="swiper_categories_deals">
+    <ng-template swiperSlide>
+      <ion-card button class="ion-no-margin ion-no-padding">
+        <ion-card-content>
+          <img src="../../../../assets/img/burger.png">
+          <div>
+            <span>Burger deal</span>
+            <h2>Big Burger<br>$6 only</h2>
+            <a>Buy now <ion-icon name="arrow-forward-outline"></ion-icon></a>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-card button class="ion-no-margin ion-no-padding">
+        <ion-card-content>
+          <img src="../../../../assets/img/sushi.png">
+          <div>
+            <span>Sushi deal</span>
+            <h2>Sushi Set<br>$5 only</h2>
+            <a>Buy now <ion-icon name="arrow-forward-outline"></ion-icon></a>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+  </swiper>
+
+  <hr class="hr-transparent hr-medium">
+
+  <div class="ion-padding-horizontal ion-margin-bottom ion-margin-top">
+    <h2>Popular restaurants</h2>
+  </div>
+
+  <swiper class="swiper-restaurants ion-margin-top-small" #swiper [config]="swiper_categories_restaurants">
+    <ng-template swiperSlide>
+      <ion-card button class="ion-no-margin ion-no-padding" routerLink="/restaurants/detail"
+        style="background: url(../../../../assets/img/restaurant_01.jpg)">
+        <ion-card-header>
+          <ion-card-subtitle>&nbsp;</ion-card-subtitle>
+          <ion-card-title>&nbsp;</ion-card-title>
+        </ion-card-header>
+        <div class="card-img-badge card-img-badge-white">
+          <p>
+            <span>🍕</span>Pizza
+          </p>
+        </div>
+        <ion-card-content>
+          <div>
+            <h2>Domino's</h2>
+            <span>60 min · Free delivery</span>
+          </div>
+          <ion-badge class="ion-no-padding">
+            <ion-icon class="ion-margin-right-small" color="white" name="star"></ion-icon>
+            <ion-label color="white">4.9</ion-label>
+          </ion-badge>
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-card button class="ion-no-margin ion-no-padding" routerLink="/restaurants/detail"
+        style="background: url(../../../../assets/img/restaurant_02.jpg)">
+        <ion-card-header>
+          <ion-card-subtitle>&nbsp;</ion-card-subtitle>
+          <ion-card-title>&nbsp;</ion-card-title>
+        </ion-card-header>
+        <div class="card-img-badge card-img-badge-white">
+          <p>
+            <span>🍲</span>Soups & Bowls
+          </p>
+        </div>
+        <ion-card-content>
+          <div>
+            <h2>Soup Heaven</h2>
+            <span>30 min · $8 delivery</span>
+          </div>
+          <ion-badge class="ion-no-padding">
+            <ion-icon class="ion-margin-right-small" color="white" name="star"></ion-icon>
+            <ion-label color="white">4.6</ion-label>
+          </ion-badge>
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-card button class="ion-no-margin ion-no-padding" routerLink="/restaurants/detail"
+        style="background: url(../../../../assets/img/restaurant_03.jpg)">
+        <ion-card-header>
+          <ion-card-subtitle>&nbsp;</ion-card-subtitle>
+          <ion-card-title>&nbsp;</ion-card-title>
+        </ion-card-header>
+        <div class="card-img-badge card-img-badge-white">
+          <p>
+            <span>🥗</span>Vegan & Veggie
+          </p>
+        </div>
+        <ion-card-content>
+          <div>
+            <h2>The Green House</h2>
+            <span>20 min · Free delivery</span>
+          </div>
+          <ion-badge class="ion-no-padding">
+            <ion-icon class="ion-margin-right-small" color="white" name="star"></ion-icon>
+            <ion-label color="white">4.2</ion-label>
+          </ion-badge>
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+  </swiper>
+
+</ion-content>
